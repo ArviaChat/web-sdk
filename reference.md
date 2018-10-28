@@ -422,7 +422,7 @@ Start or stop sharing screen.
 ### Examples
 
 ```javascript
-arviaChat.shareScreen();
+arviaChat.shareScreen(true);
 ```
 
 ## stopAudioVideo
