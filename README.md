@@ -51,4 +51,4 @@ Add a script tag to use Arvia Chat SDK methods. Call **init** method of the SDK 
 
 # That's it! Enjoy!
 
-Take a look at the SDK Reference for more options and customization.
+Take a look at the [SDK Reference](reference.md) for more options and customization.
