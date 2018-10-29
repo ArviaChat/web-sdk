@@ -60,4 +60,4 @@ For md version on this repository go to [reference.md](reference.md)
 
 
 # Live Demo With Sample SDK Usage
-Try the SDK live on [sdk sample page](https://arvia.chat/sdk/web/example.html)
+Try the SDK live on <a href="https://arvia.chat/sdk/web/example.html" target="_blank">sdk sample page</a>
