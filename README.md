@@ -41,14 +41,23 @@ Add a script tag to use Arvia Chat SDK methods. Call **init** method of the SDK 
 &nbsp;&nbsp;`<div id="arvia.chat">`<br />*
 #### &nbsp;&nbsp;`<script type="text/javascript">`<br />
 ```javascript
-    ArviaChat.init("arvia.chat");
-    ArviaChat.setRoom("my-room");
-    ArviaChat.connect();
+    var arviaChat = new ArviaChat();
+    arviaChat.init("arvia.chat");
+    arviaChat.setRoom("my-room");
+    arviaChat.connect();
 ```
 #### &nbsp;&nbsp;`</script>` <br /><br />
 *&nbsp;&nbsp;`</body>`<br />
 `</html>`*
 
-# That's it! Enjoy!
+##### That's it! Enjoy!
 
-Take a look at the [SDK Reference](reference.md) for more options and customization.
+
+
+# SDK Reference
+Take a look at the [SDK Reference](https://arvia.chat/sdk/web/reference/index.html) for more options and customization.<br />
+For md version on this repository go to [reference.md](reference.md)
+
+
+# Live Demo With Sample SDK Usage
+Try the SDK live on [sdk sample page](https://arvia.chat/sdk/web/example.html)
