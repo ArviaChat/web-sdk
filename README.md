@@ -5,6 +5,17 @@
 ## 1. Include SDK files
 First include **arvia.chat.js** and **arvia.chat.css** in your page by using the `<script>` and `<link>` tags in your html header.
 
+
+```html
+<html>
+    <head>
+        <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
+        <link rel="stylesheet" href="https://arvia.chat/css/arvia.chat.css" ></link>
+    </head>
+    <body>
+</html>
+```
+
 *`<html>`<br />
 &nbsp;&nbsp;`<head>`<br />*
 #### &nbsp;&nbsp;&nbsp;&nbsp;`<script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>`
