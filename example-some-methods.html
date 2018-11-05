@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Arvia Chat Web SDK Example</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+  <body class="m-2 p-2">
+    <h1 class="p-2d">Arvia Chat Web SDK Example With Some SDK Methods</h1>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <div class="float-left m-2">
+      <button id="start" class="btn btn-primary m-1">Start Video Chat</button>
+
+      <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
+      <div id="arvia.chat" class="m-2" style="width: 640px; height: 480px;"></div>
+    </div>
+
+    <div id="buttons" class="float-left d-none">
+      <div class="card m-2">
+        <div class="card-body">
+          <h5 class="card-title">Video Stream</h5>
+          <button id="turnOffCamera" class="btn btn-danger m-1">Turn Off Camera</button>
+          <button id="turnOnCamera" class="btn btn-primary m-1">Turn On Camera</button>
+        </div>
+      </div>
+      <div class="card m-2">
+        <div class="card-body">
+          <h5 class="card-title">Audio Stream</h5>
+          <button id="turnOffMic" class="btn btn-danger m-1">Turn Off Microphone</button>
+          <button id="turnOnMic" class="btn btn-primary m-1">Turn On Microphone</button>
+        </div>
+      </div>
+      <div class="card m-2">
+        <div class="card-body">
+          <h5 class="card-title">Audio/Video Buttons</h5>
+          <button id="hideLocalMediaButtons" class="btn btn-danger m-1">Hide Media Buttons</button>
+          <button id="showLocalMediaButtons" class="btn btn-primary m-1">Show Media Buttons</button>
+        </div>
+      </div>
+      <div class="card m-2">
+        <div class="card-body">
+          <h5 class="card-title">Message Box</h5>
+          <button id="hideMessageBox" class="btn btn-danger m-1">Hide Message Box</button>
+          <button id="showMessageBox" class="btn btn-primary m-1">Show Message Box</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="card m-2">
+      <div class="card-body">
+        <h5 class="card-title">Notifications</h5>
+        <button id="showNotificationSuccess" class="btn btn-primary m-1">Show Success Notification</button>
+        <button id="showNotificationError" class="btn btn-primary m-1">Show Error Notification</button>
+        <button id="showNotificationInfo" class="btn btn-primary m-1">Show Info Notification</button>
+        <button id="showNotificationWarn" class="btn btn-primary m-1">Show Warn Notification</button>
+      </div>
+    </div> -->
+
+    <script type="text/javascript">
+
+      var arviaChat;
+
+      document.getElementById('start').onclick = function(){
+        document.getElementById('start').onclick = undefined;
+
+        arviaChat = new ArviaChat();
+        arviaChat.init("arvia.chat");
+        arviaChat.setRoomName("test-room-2");
+        arviaChat.setTestUser(true);
+        arviaChat.connect();
+        
+        document.getElementById('buttons').classList.remove('d-none');
+        document.getElementById('start').classList.add('disabled');
+      };
+
+      document.getElementById('turnOffCamera').onclick = function(){
+        arviaChat.turnOffCamera();
+      };
+
+      document.getElementById('turnOnCamera').onclick = function(){
+        arviaChat.turnOnCamera();
+      };
+
+      document.getElementById('turnOffMic').onclick = function(){
+        arviaChat.turnOffMicrophone();
+      };
+
+      document.getElementById('turnOnMic').onclick = function(){
+        arviaChat.turnOnMicrophone();
+      };
+
+      document.getElementById('hideLocalMediaButtons').onclick = function(){
+        arviaChat.setLocalMediaButtonsVisibility(false);
+      };
+
+      document.getElementById('showLocalMediaButtons').onclick = function(){
+        arviaChat.setLocalMediaButtonsVisibility(true);
+      };
+
+      document.getElementById('hideMessageBox').onclick = function(){
+        arviaChat.setMessageBoxVisibility(false);
+      };
+
+      document.getElementById('showMessageBox').onclick = function(){
+        arviaChat.setMessageBoxVisibility(true);
+      };
+
+      // document.getElementById('showNotificationSuccess').onclick = function(){
+      //   arviaChat.showNotification('Sample Success Notification', 'success');
+      // };
+      // document.getElementById('showNotificationWarn').onclick = function(){
+      //   arviaChat.showNotification('Sample Warn Notification', 'warn');
+      // };
+      // document.getElementById('showNotificationError').onclick = function(){
+      //   arviaChat.showNotification('Sample Error Notification', 'error');
+      // };
+      // document.getElementById('showNotificationInfo').onclick = function(){
+      //   arviaChat.showNotification('Sample Info Notification', 'info');
+      // };
+
+    </script>
+
+  </body>
+</html>

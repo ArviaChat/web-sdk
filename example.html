@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Arvia Chat Web SDK Example</title>
+
+    <!-- Bootstrap CSS (Not required for Arvia Chat Web SDK) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+  <body class="m-2 p-2">
+    <h1 class="p-2d">Arvia Chat Web SDK Example</h1>
+
+    <!-- JavaScript libraries (Not required for Arvia Chat Web SDK) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Some buttons to test the SDK methods -->
+    <button id="start" class="btn btn-primary m-1">Start Video Chat</button>
+    <br>
+
+    <!-- These 2 lines are the only html code required for Arvia Chat Web SDK -->
+    <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
+    <div id="arvia.chat" class="float-left m-2"></div>
+    <!-- Yes, it is that easy! -->
+
+    <script type="text/javascript">
+
+      // Init, set and connect! It is that easy!
+      var arviaChat;
+
+      // Add listeners to the test buttons
+      document.getElementById('start').onclick = function(){
+        document.getElementById('start').onclick = undefined;
+
+        arviaChat = new ArviaChat();
+        arviaChat.init("arvia.chat");
+        arviaChat.setRoomName("test-room-1");
+        arviaChat.setTestUser(true);
+        arviaChat.connect();
+        document.getElementById('start').classList.add('disabled');
+      };
+
+    </script>
+
+  </body>
+</html>

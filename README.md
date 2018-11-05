@@ -1,63 +1,42 @@
-**Important note**: You need to add and verify your website in project platforms tab at your Arvia Chat account to be able to use Arvia Chat Web SDK on your website
+## Installation
+Just include **arvia.chat.js** on your page, create an empty div element and initialize ArviaChat in that div.
 
-# Arvia Chat Web SDK Implementation
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Arvia Chat</title>
+    <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>`
+  </head>
+  <body>
+    <button id="startButton" style="height: 32px">Start Arvia Chat</button><br />
+    <div id="arvia.chat">
+    <script type="text/javascript">
 
-## 1. Include SDK files
-First include **arvia.chat.js** and **arvia.chat.css** in your page by using the `<script>` and `<link>` tags in your html header.
+      document.getElementById('startButton').addEventListener('click',
+        
+        function() {
+          var arviaChat = new ArviaChat();
+          arviaChat.setTestUser(true);
+          arviaChat.setRoomName("test-room-1");
+          arviaChat.init("arvia.chat");
+          arviaChat.connect();
+        }
 
-*`<html>`<br />
-&nbsp;&nbsp;`<head>`<br />*
-#### &nbsp;&nbsp;&nbsp;&nbsp;`<script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>`
-#### &nbsp;&nbsp;&nbsp;&nbsp;`<link rel="stylesheet" href="https://arvia.chat/css/arvia.chat.css" ></link>`
-*&nbsp;&nbsp;`</head>`<br />
-&nbsp;&nbsp;`<body>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;...<br />
-&nbsp;&nbsp;`</body>`<br />
-`</html>`*
+      );
 
-## 2. Create the target div element
-Create a div element in your file. All of the Arvia Chat elements will be created in this div. Give an id to ths div.
-
-*`<html>`<br />
-&nbsp;&nbsp;`<head>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;`<script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;`<link rel="stylesheet" href="https://arvia.chat/css/arvia.chat.css" ></link>`<br />
-&nbsp;&nbsp;`</head>`<br />
-&nbsp;&nbsp;`<body>`<br />*
-#### &nbsp;&nbsp;`<div id="arvia.chat"></div>`
-&nbsp;&nbsp;&nbsp;&nbsp;...<br />
-*&nbsp;&nbsp;`</body>`<br />
-`</html>`*
-
-## 3. Init, set, connect
-Add a script tag to use Arvia Chat SDK methods. Call **init** method of the SDK to create the chat interface. Pass the **div id** as the parameter. Then call **setRoom** method with the **room name** as the parameter. Finally call **connect** method to make the connection.
-
-*`<html>`<br />
-&nbsp;&nbsp;`<head>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;`<script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>`<br />
-&nbsp;&nbsp;&nbsp;&nbsp;`<link rel="stylesheet" href="https://arvia.chat/css/arvia.chat.css" ></link>`<br />
-&nbsp;&nbsp;`</head>`<br />
-&nbsp;&nbsp;`<body>`<br /><br />
-&nbsp;&nbsp;`<div id="arvia.chat">`<br />*
-#### &nbsp;&nbsp;`<script type="text/javascript">`<br />
-```javascript
-    var arviaChat = new ArviaChat();
-    arviaChat.init("arvia.chat");
-    arviaChat.setRoom("my-room");
-    arviaChat.connect();
+    </script>
+  </body>
+</html>
 ```
-#### &nbsp;&nbsp;`</script>` <br /><br />
-*&nbsp;&nbsp;`</body>`<br />
-`</html>`*
 
-##### That's it! Enjoy!
+## Live Examples
+SDK with default settings <a href="https://arvia.chat/sdk/web/example.html" target="_blank">https://arvia.chat/sdk/web/example.html</a><br />
+Example with some buttons <a href="https://arvia.chat/sdk/web/example-some-methods.html" target="_blank">https://arvia.chat/sdk/web/example-some-methods.html</a><br />
+Arvia Chat in a popup <a href="https://arvia.chat/sdk/web/example-popup.html" target="_blank">https://arvia.chat/sdk/web/example-popup.html</a><br />
+Floating Chat Widget <a href="https://arvia.chat/sdk/web/example-widget.html" target="_blank">https://arvia.chat/sdk/web/example-widget.html</a><br />
 
-
-
-# SDK Reference
-Take a look at the [SDK Reference](https://arvia.chat/sdk/web/reference/index.html) for more options and customization.<br />
-For md version on this repository go to [reference.md](reference.md)
-
-
-# Live Demo With Sample SDK Usage
-Try the SDK live on <a href="https://arvia.chat/sdk/web/example.html" target="_blank">sdk sample page</a>
+## SDK Reference
+Take a look at the <a href="https://arvia.chat/sdk/web/reference/index.html" target="_blank">SDK Reference</a> for more options and customization.<br /><br />
+For mark down version, go to [reference.md](reference.md)

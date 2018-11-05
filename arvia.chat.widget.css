@@ -1,0 +1,111 @@
+@import "https://fonts.googleapis.com/css?family=Noto+Sans";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px 'Noto Sans', sans-serif;
+}
+
+.arvia-chat-widget {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  transform: translateY(70px);
+  transition: all 250ms ease-out;
+  border-radius: 50%;
+  opacity: 0;
+  background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+  background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192C46 50%, #22254C 75%, #22254C 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.arvia-chat-widget.enter:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  opacity: 1;
+}
+.arvia-chat-widget.enter {
+  transform: translateY(0);
+  opacity: 0.6;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.14);
+}
+.arvia-chat-widget.expand {
+  width: 30%;
+  min-width: 320px;
+  height: 75%;
+  min-height: 240px;
+  border-radius: 5px;
+  cursor: auto;
+  opacity: 1;
+}
+.arvia-chat-widget :focus {
+  outline: 0;
+  box-shadow: 0 0 3pt 2pt rgba(14, 200, 121, 0.3);
+}
+.arvia-chat-widget button {
+  background: transparent;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.arvia-chat-widget .chat {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  transition: all 250ms ease-out;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.arvia-chat-widget .chat.enter {
+  opacity: 1;
+  border-radius: 0;
+  margin: 10px;
+  width: auto;
+  height: auto;
+}
+.arvia-chat-widget .chat .header {
+  flex-shrink: 0;
+  padding-bottom: 10px;
+  display: flex;
+  background: transparent;
+}
+.arvia-chat-widget .chat .header .title {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0 5px;
+}
+.arvia-chat-widget .chat .header button {
+  flex-shrink: 0;
+  padding: 0px 5px 0px 20px;
+  font-size: 16px;
+}
+.arvia-chat-widget .chat .header button img{
+  width: 32px;
+  height: 32px;
+}
+.arvia-chat-widget .chat .arvia-chat {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  flex-grow: 1;
+  border-radius: 4px;
+  background-color: white;
+}
