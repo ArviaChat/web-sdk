@@ -3,153 +3,174 @@
 ### Table of Contents
 
 -   [ArviaChat][1]
-    -   [Examples][2]
--   [setUserId][3]
-    -   [Parameters][4]
-    -   [Examples][5]
--   [getUserId][6]
-    -   [Examples][7]
--   [setTestUser][8]
-    -   [Parameters][9]
-    -   [Examples][10]
--   [getTestUser][11]
-    -   [Examples][12]
--   [setRoomName][13]
-    -   [Parameters][14]
-    -   [Examples][15]
--   [getRoomName][16]
-    -   [Examples][17]
--   [setUserName][18]
-    -   [Parameters][19]
-    -   [Examples][20]
--   [getUserName][21]
-    -   [Examples][22]
--   [setUserTags][23]
-    -   [Parameters][24]
-    -   [Examples][25]
--   [getUserTags][26]
-    -   [Examples][27]
--   [setAuthentication][28]
-    -   [Parameters][29]
-    -   [Examples][30]
--   [getAuthentication][31]
-    -   [Examples][32]
--   [getUserCount][33]
-    -   [Examples][34]
--   [setLocalMediaButtonsVisibility][35]
-    -   [Parameters][36]
-    -   [Examples][37]
--   [getLocalMediaButtonsVisibility][38]
-    -   [Examples][39]
--   [setRemoteMediaButtonsVisibility][40]
-    -   [Parameters][41]
-    -   [Examples][42]
--   [getRemoteMediaButtonsVisibility][43]
-    -   [Examples][44]
--   [setMessageBoxVisibility][45]
-    -   [Parameters][46]
-    -   [Examples][47]
--   [getMessageBoxVisibility][48]
-    -   [Examples][49]
--   [setDefaultNotificationsEnabled][50]
-    -   [Parameters][51]
-    -   [Examples][52]
--   [getDefaultNotificationsEnabled][53]
-    -   [Examples][54]
--   [getDeviceInfo][55]
-    -   [Examples][56]
--   [init][57]
-    -   [Parameters][58]
-    -   [Examples][59]
--   [connect][60]
-    -   [Examples][61]
--   [switchAudioOutput][62]
+    -   [Parameters][2]
+    -   [Examples][3]
+-   [setUserId][4]
+    -   [Parameters][5]
+    -   [Examples][6]
+-   [getUserId][7]
+    -   [Examples][8]
+-   [setTestUser][9]
+    -   [Parameters][10]
+    -   [Examples][11]
+-   [getTestUser][12]
+    -   [Examples][13]
+-   [setRoomName][14]
+    -   [Parameters][15]
+    -   [Examples][16]
+-   [getRoomName][17]
+    -   [Examples][18]
+-   [setSubLevelRoomName][19]
+    -   [Parameters][20]
+    -   [Examples][21]
+-   [getSubLevelRoomName][22]
+    -   [Examples][23]
+-   [setUserName][24]
+    -   [Parameters][25]
+    -   [Examples][26]
+-   [getUserName][27]
+    -   [Examples][28]
+-   [setUserTags][29]
+    -   [Parameters][30]
+    -   [Examples][31]
+-   [getUserTags][32]
+    -   [Examples][33]
+-   [setAuthentication][34]
+    -   [Parameters][35]
+    -   [Examples][36]
+-   [getAuthentication][37]
+    -   [Examples][38]
+-   [getUserCount][39]
+    -   [Examples][40]
+-   [setLocalMediaButtonsVisibility][41]
+    -   [Parameters][42]
+    -   [Examples][43]
+-   [getLocalMediaButtonsVisibility][44]
+    -   [Examples][45]
+-   [setRemoteMediaButtonsVisibility][46]
+    -   [Parameters][47]
+    -   [Examples][48]
+-   [getRemoteMediaButtonsVisibility][49]
+    -   [Examples][50]
+-   [setMessageBoxVisibility][51]
+    -   [Parameters][52]
+    -   [Examples][53]
+-   [getMessageBoxVisibility][54]
+    -   [Examples][55]
+-   [setMediaMessageButtonVisibility][56]
+    -   [Parameters][57]
+    -   [Examples][58]
+-   [getMediaMessageButtonVisibility][59]
+    -   [Examples][60]
+-   [setEndCallButtonVisibility][61]
+    -   [Parameters][62]
     -   [Examples][63]
--   [switchMicrophone][64]
+-   [getEndCallButtonVisibility][64]
     -   [Examples][65]
--   [setMicrophone][66]
+-   [setDefaultNotificationsEnabled][66]
     -   [Parameters][67]
     -   [Examples][68]
--   [getMicrophone][69]
--   [switchCamera][70]
-    -   [Examples][71]
--   [setCamera][72]
-    -   [Parameters][73]
-    -   [Examples][74]
--   [getCamera][75]
-    -   [Examples][76]
--   [toggleScreenSharing][77]
-    -   [Examples][78]
--   [shareScreen][79]
-    -   [Parameters][80]
+-   [getDefaultNotificationsEnabled][69]
+    -   [Examples][70]
+-   [getDeviceInfo][71]
+    -   [Examples][72]
+-   [init][73]
+    -   [Parameters][74]
+    -   [Examples][75]
+-   [connect][76]
+    -   [Examples][77]
+-   [switchAudioOutput][78]
+    -   [Examples][79]
+-   [switchMicrophone][80]
     -   [Examples][81]
--   [stopAudioVideo][82]
-    -   [Examples][83]
--   [disconnect][84]
-    -   [Examples][85]
--   [turnOnMicrophone][86]
+-   [setMicrophone][82]
+    -   [Parameters][83]
+    -   [Examples][84]
+-   [getMicrophone][85]
+-   [switchCamera][86]
     -   [Examples][87]
--   [turnOffMicrophone][88]
-    -   [Examples][89]
--   [turnOnCamera][90]
-    -   [Examples][91]
--   [turnOffCamera][92]
-    -   [Examples][93]
--   [resize][94]
-    -   [Examples][95]
--   [showNotification][96]
-    -   [Parameters][97]
-    -   [Examples][98]
--   [close][99]
+-   [setCamera][88]
+    -   [Parameters][89]
+    -   [Examples][90]
+-   [getCamera][91]
+    -   [Examples][92]
+-   [toggleScreenSharing][93]
+    -   [Examples][94]
+-   [close][95]
+    -   [Parameters][96]
+    -   [Examples][97]
+-   [shareScreen][98]
+    -   [Parameters][99]
     -   [Examples][100]
--   [ArviaChatEvent.CONNECTING][101]
+-   [stopAudioVideo][101]
     -   [Examples][102]
--   [ArviaChatEvent.CONNECT][103]
+-   [disconnect][103]
     -   [Examples][104]
--   [ArviaChatEvent.CONNECT_ERROR][105]
+-   [turnOnMicrophone][105]
     -   [Examples][106]
--   [ArviaChatEvent.AUTHENTICATION_ERROR][107]
+-   [turnOffMicrophone][107]
     -   [Examples][108]
--   [ArviaChatEvent.JOIN_REQUEST][109]
+-   [turnOnCamera][109]
     -   [Examples][110]
--   [ArviaChatEvent.JOIN_ROOM_ERROR][111]
+-   [turnOffCamera][111]
     -   [Examples][112]
--   [ArviaChatEvent.USER_JOIN][113]
+-   [resize][113]
     -   [Examples][114]
--   [ArviaChatEvent.USER_LIST][115]
-    -   [Examples][116]
--   [ArviaChatEvent.WAITING_FOR_PERMISSION][117]
-    -   [Examples][118]
--   [ArviaChatEvent.ROOM_FULL][119]
-    -   [Examples][120]
--   [ArviaChatEvent.DEVICE_INFO][121]
-    -   [Examples][122]
--   [ArviaChatEvent.DEVICE_INFO_ERROR][123]
-    -   [Examples][124]
--   [ArviaChatEvent.LOCAL_STREAM][125]
-    -   [Examples][126]
--   [ArviaChatEvent.LOCAL_STREAM_ERROR][127]
-    -   [Examples][128]
--   [ArviaChatEvent.SCREEN_SHARE][129]
-    -   [Examples][130]
--   [ArviaChatEvent.SCREEN_SHARE_ERROR][131]
-    -   [Examples][132]
--   [ArviaChatEvent.MESSAGE][133]
-    -   [Examples][134]
--   [ArviaChatEvent.DISCONNECT][135]
-    -   [Examples][136]
+-   [showNotification][115]
+    -   [Parameters][116]
+    -   [Examples][117]
+-   [ArviaChatEvent.CONNECTING][118]
+    -   [Examples][119]
+-   [ArviaChatEvent.AUTHENTICATION_ERROR][120]
+    -   [Examples][121]
+-   [ArviaChatEvent.CONNECT_ERROR][122]
+    -   [Examples][123]
+-   [ArviaChatEvent.DISCONNECT][124]
+    -   [Examples][125]
+-   [ArviaChatEvent.JOIN_REQUEST][126]
+    -   [Examples][127]
+-   [ArviaChatEvent.JOIN_ROOM_ERROR][128]
+    -   [Examples][129]
+-   [ArviaChatEvent.USER_JOIN][130]
+    -   [Examples][131]
+-   [ArviaChatEvent.USER_LIST][132]
+    -   [Examples][133]
+-   [ArviaChatEvent.WAITING_FOR_PERMISSION][134]
+    -   [Examples][135]
+-   [ArviaChatEvent.ROOM_FULL][136]
+    -   [Examples][137]
+-   [ArviaChatEvent.DEVICE_INFO][138]
+    -   [Examples][139]
+-   [ArviaChatEvent.DEVICE_INFO_ERROR][140]
+    -   [Examples][141]
+-   [ArviaChatEvent.LOCAL_STREAM][142]
+    -   [Examples][143]
+-   [ArviaChatEvent.LOCAL_STREAM_ERROR][144]
+    -   [Examples][145]
+-   [ArviaChatEvent.SCREEN_SHARE][146]
+    -   [Examples][147]
+-   [ArviaChatEvent.SCREEN_SHARE_ERROR][148]
+    -   [Examples][149]
+-   [ArviaChatEvent.MESSAGE][150]
+    -   [Examples][151]
+-   [ArviaChatEvent.CONNECT][152]
+    -   [Examples][153]
 
 ## ArviaChat
 
 Constructor for Arvia Chat.
 
+### Parameters
+
+-   `projectId` **[string][154]** ID of your arvia.chat project. You can find this in your project overview on your arvia.chat account.
+
 ### Examples
 
 ```javascript
-var arviaChat = new ArviaChat();
+var arviaChat = new ArviaChat('5b4f145ac4dbc95dcf926a52');
 ```
 
-Returns **[ArviaChat][137]** Arvia Chat instance
+Returns **[ArviaChat][155]** Arvia Chat instance
 
 ## setUserId
 
@@ -157,7 +178,7 @@ Set user id.
 
 ### Parameters
 
--   `userId` **[string][138]** Uniqe user id of the user.
+-   `userId` **[string][154]** Uniqe user id of the user. You can use this user id track this user.
 
 ### Examples
 
@@ -176,7 +197,7 @@ arviaChat.getUserId();
 // returns '12345'
 ```
 
-Returns **[string][138]** userId The user id set by the setUserId method.
+Returns **[string][154]** userId The user id set by the setUserId method.
 
 ## setTestUser
 
@@ -184,12 +205,13 @@ Set test user.
 
 ### Parameters
 
--   `testUser` **[boolean][139]** Set this to true while development only.
+-   `testUser` **[boolean][156]** Set this to true while development only.
 
 ### Examples
 
 ```javascript
 arviaChat.setTestUser(true);
+// Test users will connect to a test room automatically
 ```
 
 ## getTestUser
@@ -203,7 +225,7 @@ arviaChat.getTestUser();
 // returns true
 ```
 
-Returns **[boolean][139]** If true, this is a test user.
+Returns **[boolean][156]** If true, this is a test user.
 
 ## setRoomName
 
@@ -211,12 +233,17 @@ Set room name.
 
 ### Parameters
 
--   `roomName` **[string][138]** The room name to connect and join
+-   `roomName` **[string][154]** The room name to connect and join
 
 ### Examples
 
 ```javascript
+// Top-level room
 arviaChat.setRoomName('my-room');
+
+// Sub-level room ([projectId]/[roomName])
+arviaChat.setRoomName('5b4f145ac4dbc95dcf926a52/my-room');
+// You can also set the sub-level room name using setSubLevelRoomName method. setSubLevelRoomName method only gets the room name as the parameter. Project id is added automatically as a prefix.
 ```
 
 ## getRoomName
@@ -227,10 +254,43 @@ Get room name.
 
 ```javascript
 arviaChat.getRoomName();
-// returns 'my-room'
+// returns 'my-room' if the room is a top-level room
+
+// if current room is a sub-level room, this method returns [projectId]/[roomName] (E.g: '5b4f145ac4dbc95dcf926a52/my-room')
 ```
 
-Returns **[string][138]** The room name set by the setRoomName method.
+Returns **[string][154]** The room name set by the setRoomName method.
+
+## setSubLevelRoomName
+
+Set sub-level room name.
+
+### Parameters
+
+-   `roomName` **[string][154]** The sub-level room name suffix to connect and join
+
+### Examples
+
+```javascript
+arviaChat.setSubLevelRoomName('my-room');
+
+// Actual room name will be [projectId]/[roomName] (E.g: '5b4f145ac4dbc95dcf926a52/my-room')
+```
+
+## getSubLevelRoomName
+
+Get room name.
+
+### Examples
+
+```javascript
+arviaChat.getSubLevelRoomName();
+// returns 'my-room'
+
+// If current room is not a sub-level room, this method returns empty string.
+```
+
+Returns **[string][154]** The room name set by the setSubLevelRoomName method.
 
 ## setUserName
 
@@ -238,7 +298,7 @@ Set user name.
 
 ### Parameters
 
--   `userName` **[string][138]** The room name to connect and join
+-   `userName` **[string][154]** The custom user name that you can use later
 
 ### Examples
 
@@ -257,7 +317,7 @@ arviaChat.getUserName();
 // returns 'John Smith'
 ```
 
-Returns **[string][138]** The user name set by the setUserName method
+Returns **[string][154]** The user name set by the setUserName method
 
 ## setUserTags
 
@@ -265,7 +325,7 @@ Set user tags.
 
 ### Parameters
 
--   `userTags` **[Array][140]&lt;[string][138]>** The user tags to group or classify the user. Users can be assigned to specific agents by assigning the same tags to the users and the agents which you add to your projects or rooms on your Arvia Chat account center.
+-   `userTags` **[Array][157]&lt;[string][154]>** The user tags to group or classify the user. Users can be assigned to specific agents by assigning the same tags to the users and the agents which you add to your projects or rooms on your Arvia Chat account center.
 
 ### Examples
 
@@ -284,7 +344,7 @@ arviaChat.getUserTags();
 // returns ['Speaks-English', 'From-USA', '25-year-old']
 ```
 
-Returns **[Array][140]&lt;[string][138]>** The user tags set by the setUserTags method
+Returns **[Array][157]&lt;[string][154]>** The user tags set by the setUserTags method
 
 ## setAuthentication
 
@@ -292,7 +352,7 @@ Set authentication object.
 
 ### Parameters
 
--   `authentication` **[object][141]** The authentication object which includes the required login credentials (or token, session id, etc.) to validate your users before allowing them to join your rooms. You need to set the authentication url for your project on your Arvia account center. The authentication url must be a script under your validated website platform.Variables in this authentication object, will be posted to the authentication url which is set on your account center. On a valid request, your authentication script should return a json string including a 'success' parameter set to true. Any other respone will be considered as a failed authentication.Please take a look at the Autherntication tab on your Arvia account center for more information and examples.
+-   `authentication` **[object][158]** The authentication object which includes the required login credentials (or token, session id, etc.) to validate your users before allowing them to join your rooms. You need to set the authentication url for your project on your Arvia account center. The authentication url must be a script under your validated website platform.Variables in this authentication object, will be posted to the authentication url which is set on your account center. On a valid request, your authentication script should return a json string including a 'success' parameter set to true. Any other respone will be considered as a failed authentication.Please take a look at the Autherntication tab on your Arvia account center for more information and examples.
 
 ### Examples
 
@@ -311,7 +371,7 @@ arviaChat.getAuthentication();
 // returns {token: awqwr7632s76xfew68rhb68hwf8et}
 ```
 
-Returns **[object][141]** The authentication object set by the setAuthentication method
+Returns **[object][158]** The authentication object set by the setAuthentication method
 
 ## getUserCount
 
@@ -324,7 +384,7 @@ arviaChat.getUserCount();
 // returns 2
 ```
 
-Returns **[number][142]** The number of users in the room.
+Returns **[number][159]** The number of users in the room.
 
 ## setLocalMediaButtonsVisibility
 
@@ -332,7 +392,7 @@ Set local media buttons visibility status.
 
 ### Parameters
 
--   `visible` **[boolean][139]** If set to true, camera and microphone buttons will be visible. If set to false, camera and microphone buttons will be hidden.
+-   `visible` **[boolean][156]** If set to true, camera and microphone buttons will be visible. If set to false, camera and microphone buttons will be hidden.
 
 ### Examples
 
@@ -351,7 +411,7 @@ arviaChat.getLocalMediaButtonsVisibility();
 // returns true
 ```
 
-Returns **[boolean][139]** The local media buttons visibility status set by the setLocalMediaButtonsVisibility method
+Returns **[boolean][156]** The local media buttons visibility status set by the setLocalMediaButtonsVisibility method
 
 ## setRemoteMediaButtonsVisibility
 
@@ -359,7 +419,7 @@ Set visibility status of remote users' media options buttons.
 
 ### Parameters
 
--   `visible` **[boolean][139]** If set to true, options button, which toggles the incoming video, incoming audio and fullscreen buttos, will be visible. If set to false, these options button will be hidden.
+-   `visible` **[boolean][156]** If set to true, options button, which toggles the incoming video, incoming audio and fullscreen buttos, will be visible. If set to false, these options button will be hidden.
 
 ### Examples
 
@@ -378,7 +438,7 @@ arviaChat.getRemoteMediaButtonsVisibility();
 // returns true
 ```
 
-Returns **[boolean][139]** The visibility status of remote users' media options buttons set by the setRemoteMediaButtonsVisibility method
+Returns **[boolean][156]** The visibility status of remote users' media options buttons set by the setRemoteMediaButtonsVisibility method
 
 ## setMessageBoxVisibility
 
@@ -386,7 +446,7 @@ Set visibility status of message box.
 
 ### Parameters
 
--   `visible` **[boolean][139]** If set to true, message box will be visible. If set to false, message box will be hidden.
+-   `visible` **[boolean][156]** If set to true, message box will be visible. If set to false, message box will be hidden.
 
 ### Examples
 
@@ -405,7 +465,61 @@ arviaChat.getMessageBoxVisibility();
 // returns true
 ```
 
-Returns **[boolean][139]** The visibility status of message box set by the setMessageBoxVisibility method.
+Returns **[boolean][156]** The visibility status of message box set by the setMessageBoxVisibility method.
+
+## setMediaMessageButtonVisibility
+
+Set visibility status of media message button.
+
+### Parameters
+
+-   `visible` **[boolean][156]** If set to true, media message button will be visible. If set to false, media message button will be hidden.
+
+### Examples
+
+```javascript
+arviaChat.setMediaMessageButtonVisibility(true);
+```
+
+## getMediaMessageButtonVisibility
+
+Get visibility status of media message button.
+
+### Examples
+
+```javascript
+arviaChat.getMediaMessageButtonVisibility();
+// returns true
+```
+
+Returns **[boolean][156]** The visibility status of media message button set by the setMediaMessageButtonVisibility method.
+
+## setEndCallButtonVisibility
+
+Set visibility status of end call button.
+
+### Parameters
+
+-   `visible` **[boolean][156]** If set to true, end call button will be visible. If set to false, end call button will be hidden.
+
+### Examples
+
+```javascript
+arviaChat.setEndCallButtonButtonVisibility(true);
+```
+
+## getEndCallButtonVisibility
+
+Get visibility status of end call button.
+
+### Examples
+
+```javascript
+arviaChat.getEndCallButtonVisibility();
+// returns true
+```
+
+Returns **[boolean][156]** The visibility status of end call button set by the setEndCallButtonVisibility method.
 
 ## setDefaultNotificationsEnabled
 
@@ -413,7 +527,7 @@ Enable or disable default notifications which are sent by the SDK.
 
 ### Parameters
 
--   `enabled` **[boolean][139]** If set to true, default notifications are enabled. If false, default notifications are disabled.
+-   `enabled` **[boolean][156]** If set to true, default notifications are enabled. If false, default notifications are disabled.
 
 ### Examples
 
@@ -432,7 +546,7 @@ arviaChat.getDefaultNotificationsEnabled();
 // returns true
 ```
 
-Returns **[boolean][139]** If returns true, default notifications are enabled. If returns false, default notifications are disabled.
+Returns **[boolean][156]** If returns true, default notifications are enabled. If returns false, default notifications are disabled.
 
 ## getDeviceInfo
 
@@ -450,7 +564,7 @@ arviaChat.on(ArviaChatEvent.DEVICE_INFO,
 );
 ```
 
-Returns **[object][141]** Device info object which includes audio and video sources.
+Returns **[object][158]** Device info object which includes audio and video sources.
 
 ## init
 
@@ -458,7 +572,7 @@ Create the chat interface in the target div element.
 
 ### Parameters
 
--   `targetElement` **([string][138] \| [object][141])** Id (or DOM Object) of the target div element
+-   `targetElement` **([string][154] \| [object][158])** Id (or DOM Object) of the target div element
 
 ### Examples
 
@@ -502,7 +616,7 @@ Set the outgoing audio stream source device.
 
 ### Parameters
 
--   `microphone` **([boolean][139] \| [string][138])** True/False or Microphone Id to enable or disable video stream. Available Microphone Ids can be obtained by the getDeviceInfo method.
+-   `microphone` **([boolean][156] \| [string][154])** True/False or Microphone Id to enable or disable video stream. Available Microphone Ids can be obtained by the getDeviceInfo method.
 
 ### Examples
 
@@ -514,7 +628,7 @@ arviaChat.setMicrophone(true);
 
 Get the outgoing audio stream source device id .
 
-Returns **([boolean][139] \| [string][138])** false or Microphone Id of the outgoing audio stream source.
+Returns **([boolean][156] \| [string][154])** false or Microphone Id of the outgoing audio stream source.
 arviaChat.getMicrophone();
 
 ## switchCamera
@@ -533,7 +647,7 @@ Set the outgoing video stream source device.
 
 ### Parameters
 
--   `camera` **([boolean][139] \| [string][138])** True/False or Camera Id to enable or disable video stream. Available Camera Ids can be obtained by the getDeviceInfo method.
+-   `camera` **([boolean][156] \| [string][154])** True/False or Camera Id to enable or disable video stream. Available Camera Ids can be obtained by the getDeviceInfo method.
 
 ### Examples
 
@@ -551,7 +665,7 @@ Get the outgoing video stream source device id .
 arviaChat.getCamera();
 ```
 
-Returns **([boolean][139] \| [string][138])** false or Camera Id of the outgoing video stream source.
+Returns **([boolean][156] \| [string][154])** false or Camera Id of the outgoing video stream source.
 
 ## toggleScreenSharing
 
@@ -563,13 +677,27 @@ Toggles sharing screen start/stop.
 arviaChat.toggleScreenSharing();
 ```
 
+## close
+
+Disconnect and terminate the chat interface.
+
+### Parameters
+
+-   `closeRoom`  
+
+### Examples
+
+```javascript
+arviaChat.close();
+```
+
 ## shareScreen
 
 Start or stop sharing screen.
 
 ### Parameters
 
--   `share` **[boolean][139]** If set to true, screen sharing starts. If set to false, sceeen sharing stops.
+-   `share` **[boolean][156]** If set to true, screen sharing starts. If set to false, sceeen sharing stops.
 
 ### Examples
 
@@ -653,23 +781,13 @@ Show a notification using the Arvia Chat's built in notifications.
 
 ### Parameters
 
--   `text` **[string][138]** Text to display
--   `type` **[string][138]** Type of the notification ('base', 'success', 'error', 'info', 'warn')
+-   `text` **[string][154]** Text to display
+-   `type` **[string][154]** Type of the notification ('base', 'success', 'error', 'info', 'warn')
 
 ### Examples
 
 ```javascript
 arviaChat.showNotification('Please wait while connecting...');
-```
-
-## close
-
-Disconnect and terminate the chat interface.
-
-### Examples
-
-```javascript
-arviaChat.close();
 ```
 
 ## ArviaChatEvent.CONNECTING
@@ -686,16 +804,17 @@ arviaChat.on(ArviaChatEvent.CONNECTING,
 );
 ```
 
-## ArviaChatEvent.CONNECT
+## ArviaChatEvent.AUTHENTICATION_ERROR
 
-Dispatched when connected.
+Dispatched if the authentication fails.
 
 ### Examples
 
 ```javascript
-arviaChat.on(ArviaChatEvent.CONNECT, 
+arviaChat.on(ArviaChatEvent.AUTHENTICATION_ERROR, 
  function (e) {
-   arviaChat.showNotification('Connected to room');
+   arviaChat.showNotification('Authentication failed.');
+   console.log(e);
  }
 );
 ```
@@ -715,17 +834,16 @@ arviaChat.on(ArviaChatEvent.CONNECT_ERROR,
 );
 ```
 
-## ArviaChatEvent.AUTHENTICATION_ERROR
+## ArviaChatEvent.DISCONNECT
 
-Dispatched if the authentication fails.
+Dispatched when disconnected.
 
 ### Examples
 
 ```javascript
-arviaChat.on(ArviaChatEvent.AUTHENTICATION_ERROR, 
+arviaChat.on(ArviaChatEvent.DISCONNECT, 
  function (e) {
-   arviaChat.showNotification('Authentication failed.');
-   console.log(e);
+   arviaChat.showNotification('Disconnected from server!');
  }
 );
 ```
@@ -930,300 +1048,334 @@ arviaChat.on(ArviaChatEvent.MESSAGE,
 );
 ```
 
-## ArviaChatEvent.DISCONNECT
+## ArviaChatEvent.CONNECT
 
-Dispatched when disconnected.
+Dispatched when connected.
 
 ### Examples
 
 ```javascript
-arviaChat.on(ArviaChatEvent.DISCONNECT, 
+arviaChat.on(ArviaChatEvent.CONNECT, 
  function (e) {
-   arviaChat.showNotification('Disconnected from server!');
+   arviaChat.showNotification('Connected to room');
  }
 );
 ```
 
 [1]: #arviachat
 
-[2]: #examples
+[2]: #parameters
 
-[3]: #setuserid
+[3]: #examples
 
-[4]: #parameters
+[4]: #setuserid
 
-[5]: #examples-1
+[5]: #parameters-1
 
-[6]: #getuserid
+[6]: #examples-1
 
-[7]: #examples-2
+[7]: #getuserid
 
-[8]: #settestuser
+[8]: #examples-2
 
-[9]: #parameters-1
+[9]: #settestuser
 
-[10]: #examples-3
+[10]: #parameters-2
 
-[11]: #gettestuser
+[11]: #examples-3
 
-[12]: #examples-4
+[12]: #gettestuser
 
-[13]: #setroomname
+[13]: #examples-4
 
-[14]: #parameters-2
+[14]: #setroomname
 
-[15]: #examples-5
+[15]: #parameters-3
 
-[16]: #getroomname
+[16]: #examples-5
 
-[17]: #examples-6
+[17]: #getroomname
 
-[18]: #setusername
+[18]: #examples-6
 
-[19]: #parameters-3
+[19]: #setsublevelroomname
 
-[20]: #examples-7
+[20]: #parameters-4
 
-[21]: #getusername
+[21]: #examples-7
 
-[22]: #examples-8
+[22]: #getsublevelroomname
 
-[23]: #setusertags
+[23]: #examples-8
 
-[24]: #parameters-4
+[24]: #setusername
 
-[25]: #examples-9
+[25]: #parameters-5
 
-[26]: #getusertags
+[26]: #examples-9
 
-[27]: #examples-10
+[27]: #getusername
 
-[28]: #setauthentication
+[28]: #examples-10
 
-[29]: #parameters-5
+[29]: #setusertags
 
-[30]: #examples-11
+[30]: #parameters-6
 
-[31]: #getauthentication
+[31]: #examples-11
 
-[32]: #examples-12
+[32]: #getusertags
 
-[33]: #getusercount
+[33]: #examples-12
 
-[34]: #examples-13
+[34]: #setauthentication
 
-[35]: #setlocalmediabuttonsvisibility
+[35]: #parameters-7
 
-[36]: #parameters-6
+[36]: #examples-13
 
-[37]: #examples-14
+[37]: #getauthentication
 
-[38]: #getlocalmediabuttonsvisibility
+[38]: #examples-14
 
-[39]: #examples-15
+[39]: #getusercount
 
-[40]: #setremotemediabuttonsvisibility
+[40]: #examples-15
 
-[41]: #parameters-7
+[41]: #setlocalmediabuttonsvisibility
 
-[42]: #examples-16
+[42]: #parameters-8
 
-[43]: #getremotemediabuttonsvisibility
+[43]: #examples-16
 
-[44]: #examples-17
+[44]: #getlocalmediabuttonsvisibility
 
-[45]: #setmessageboxvisibility
+[45]: #examples-17
 
-[46]: #parameters-8
+[46]: #setremotemediabuttonsvisibility
 
-[47]: #examples-18
+[47]: #parameters-9
 
-[48]: #getmessageboxvisibility
+[48]: #examples-18
 
-[49]: #examples-19
+[49]: #getremotemediabuttonsvisibility
 
-[50]: #setdefaultnotificationsenabled
+[50]: #examples-19
 
-[51]: #parameters-9
+[51]: #setmessageboxvisibility
 
-[52]: #examples-20
+[52]: #parameters-10
 
-[53]: #getdefaultnotificationsenabled
+[53]: #examples-20
 
-[54]: #examples-21
+[54]: #getmessageboxvisibility
 
-[55]: #getdeviceinfo
+[55]: #examples-21
 
-[56]: #examples-22
+[56]: #setmediamessagebuttonvisibility
 
-[57]: #init
+[57]: #parameters-11
 
-[58]: #parameters-10
+[58]: #examples-22
 
-[59]: #examples-23
+[59]: #getmediamessagebuttonvisibility
 
-[60]: #connect
+[60]: #examples-23
 
-[61]: #examples-24
+[61]: #setendcallbuttonvisibility
 
-[62]: #switchaudiooutput
+[62]: #parameters-12
 
-[63]: #examples-25
+[63]: #examples-24
 
-[64]: #switchmicrophone
+[64]: #getendcallbuttonvisibility
 
-[65]: #examples-26
+[65]: #examples-25
 
-[66]: #setmicrophone
+[66]: #setdefaultnotificationsenabled
 
-[67]: #parameters-11
+[67]: #parameters-13
 
-[68]: #examples-27
+[68]: #examples-26
 
-[69]: #getmicrophone
+[69]: #getdefaultnotificationsenabled
 
-[70]: #switchcamera
+[70]: #examples-27
 
-[71]: #examples-28
+[71]: #getdeviceinfo
 
-[72]: #setcamera
+[72]: #examples-28
 
-[73]: #parameters-12
+[73]: #init
 
-[74]: #examples-29
+[74]: #parameters-14
 
-[75]: #getcamera
+[75]: #examples-29
 
-[76]: #examples-30
+[76]: #connect
 
-[77]: #togglescreensharing
+[77]: #examples-30
 
-[78]: #examples-31
+[78]: #switchaudiooutput
 
-[79]: #sharescreen
+[79]: #examples-31
 
-[80]: #parameters-13
+[80]: #switchmicrophone
 
 [81]: #examples-32
 
-[82]: #stopaudiovideo
+[82]: #setmicrophone
 
-[83]: #examples-33
+[83]: #parameters-15
 
-[84]: #disconnect
+[84]: #examples-33
 
-[85]: #examples-34
+[85]: #getmicrophone
 
-[86]: #turnonmicrophone
+[86]: #switchcamera
 
-[87]: #examples-35
+[87]: #examples-34
 
-[88]: #turnoffmicrophone
+[88]: #setcamera
 
-[89]: #examples-36
+[89]: #parameters-16
 
-[90]: #turnoncamera
+[90]: #examples-35
 
-[91]: #examples-37
+[91]: #getcamera
 
-[92]: #turnoffcamera
+[92]: #examples-36
 
-[93]: #examples-38
+[93]: #togglescreensharing
 
-[94]: #resize
+[94]: #examples-37
 
-[95]: #examples-39
+[95]: #close
 
-[96]: #shownotification
+[96]: #parameters-17
 
-[97]: #parameters-14
+[97]: #examples-38
 
-[98]: #examples-40
+[98]: #sharescreen
 
-[99]: #close
+[99]: #parameters-18
 
-[100]: #examples-41
+[100]: #examples-39
 
-[101]: #arviachateventconnecting
+[101]: #stopaudiovideo
 
-[102]: #examples-42
+[102]: #examples-40
 
-[103]: #arviachateventconnect
+[103]: #disconnect
 
-[104]: #examples-43
+[104]: #examples-41
 
-[105]: #arviachateventconnect_error
+[105]: #turnonmicrophone
 
-[106]: #examples-44
+[106]: #examples-42
 
-[107]: #arviachateventauthentication_error
+[107]: #turnoffmicrophone
 
-[108]: #examples-45
+[108]: #examples-43
 
-[109]: #arviachateventjoin_request
+[109]: #turnoncamera
 
-[110]: #examples-46
+[110]: #examples-44
 
-[111]: #arviachateventjoin_room_error
+[111]: #turnoffcamera
 
-[112]: #examples-47
+[112]: #examples-45
 
-[113]: #arviachateventuser_join
+[113]: #resize
 
-[114]: #examples-48
+[114]: #examples-46
 
-[115]: #arviachateventuser_list
+[115]: #shownotification
 
-[116]: #examples-49
+[116]: #parameters-19
 
-[117]: #arviachateventwaiting_for_permission
+[117]: #examples-47
 
-[118]: #examples-50
+[118]: #arviachateventconnecting
 
-[119]: #arviachateventroom_full
+[119]: #examples-48
 
-[120]: #examples-51
+[120]: #arviachateventauthentication_error
 
-[121]: #arviachateventdevice_info
+[121]: #examples-49
 
-[122]: #examples-52
+[122]: #arviachateventconnect_error
 
-[123]: #arviachateventdevice_info_error
+[123]: #examples-50
 
-[124]: #examples-53
+[124]: #arviachateventdisconnect
 
-[125]: #arviachateventlocal_stream
+[125]: #examples-51
 
-[126]: #examples-54
+[126]: #arviachateventjoin_request
 
-[127]: #arviachateventlocal_stream_error
+[127]: #examples-52
 
-[128]: #examples-55
+[128]: #arviachateventjoin_room_error
 
-[129]: #arviachateventscreen_share
+[129]: #examples-53
 
-[130]: #examples-56
+[130]: #arviachateventuser_join
 
-[131]: #arviachateventscreen_share_error
+[131]: #examples-54
 
-[132]: #examples-57
+[132]: #arviachateventuser_list
 
-[133]: #arviachateventmessage
+[133]: #examples-55
 
-[134]: #examples-58
+[134]: #arviachateventwaiting_for_permission
 
-[135]: #arviachateventdisconnect
+[135]: #examples-56
 
-[136]: #examples-59
+[136]: #arviachateventroom_full
 
-[137]: #arviachat
+[137]: #examples-57
 
-[138]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[138]: #arviachateventdevice_info
 
-[139]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[139]: #examples-58
 
-[140]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+[140]: #arviachateventdevice_info_error
 
-[141]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+[141]: #examples-59
 
-[142]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[142]: #arviachateventlocal_stream
+
+[143]: #examples-60
+
+[144]: #arviachateventlocal_stream_error
+
+[145]: #examples-61
+
+[146]: #arviachateventscreen_share
+
+[147]: #examples-62
+
+[148]: #arviachateventscreen_share_error
+
+[149]: #examples-63
+
+[150]: #arviachateventmessage
+
+[151]: #examples-64
+
+[152]: #arviachateventconnect
+
+[153]: #examples-65
+
+[154]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+
+[155]: #arviachat
+
+[156]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[157]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+[158]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
+
+[159]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number

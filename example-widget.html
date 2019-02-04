@@ -6,112 +6,22 @@
 
     <title>Arvia Chat Web SDK Example - Chat Widget</title>
 
-    <link rel="stylesheet" href="https://arvia.chat/sdk/web/arvia.chat.widget.css">
-
   </head>
 
   <body>
     <h1 class="p-3">Arvia Chat Web SDK Example - Floating Chat Widget</h1>
 
     <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
+    <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.widget.js" ></script>
 
     <div>Click the chat button on the bottom-right corner of the screen</div>
 
-    <div id="arvia.chat.widget" class="arvia-chat-widget">
-        <img id="arvia.chat.widget.logo" src="https://arvia.chat/img/logo-white.png"/>
-        <div id="arvia.chat.widget.container" class="chat">
-            <div class="header">
-                <span class="title">
-                    Let's have a chat 😊
-                </span>
-                <button id="startVideoCall">
-                    <img id="cameraIcon" src="https://arvia.chat/img/camera-white.svg"/>
-                </button>
-                <button id="closeChatWidget">
-                    <img src="https://arvia.chat/img/close-white.svg"/
-                </button>
-                             
-            </div>
-            <div id="arvia.chat"></div>
-        </div>
-    </div>
-
     <script type="text/javascript">
+        
+        var arviaChatWidget = new ArviaChatWidget('5b4f145ac4dbc95dcf926a52');
+        arviaChatWidget.setTestUser(true);
+        arviaChatWidget.init();
 
-        var arviaChat;
-
-        document.getElementById('startVideoCall').addEventListener("click", function(){
-
-            if ( arviaChat.getCamera() ) {
-                document.getElementById('cameraIcon').setAttribute('src', 'https://arvia.chat/img/camera-white.svg');
-                arviaChat.setCamera(false);
-            } else {
-                document.getElementById('cameraIcon').setAttribute('src', 'https://arvia.chat/img/camera-white-off.svg');
-                arviaChat.setCamera(true);
-
-            }
-
-        });
-
-        var arviaChatWidget = document.getElementById('arvia.chat.widget');
-
-        setTimeout(function () {
-            arviaChatWidget.classList.add('enter');
-        }, 1000);
-
-        arviaChatWidget.addEventListener("click", openArviaChatWidget);
-
-        function openArviaChatWidget() {
-
-            if (!arviaChat) {
-
-                arviaChat = new ArviaChat();
-                arviaChat.setCamera(false);
-                arviaChat.setMicrophone(false);
-                arviaChat.setRoomName("test-room-4");
-                arviaChat.setTestUser(true);
-                arviaChat.init("arvia.chat");
-                arviaChat.addMessageToMessagePane(
-                    {
-                        userName: "Arvia",
-                        message: "Hello 😊"
-                    }
-                );                  
-                arviaChat.addMessageToMessagePane(
-                    {
-                        userName: "Arvia",
-                        message: "Click the camera button to start a video call"
-                    }
-                );                  
-
-                arviaChat.connect();
-
-
-            }
-
-            arviaChatWidget.removeEventListener("click", openArviaChatWidget);
-            arviaChatWidget.classList.add('expand');
-            document.getElementById('closeChatWidget').addEventListener("click", closeArviaChatWidget);
-            document.getElementById('arvia.chat.widget.logo').style.display = 'none';
-            document.getElementById('arvia.chat.widget.container').classList.add('enter');
-        }
-
-        function closeArviaChatWidget() {
-
-            arviaChat.close();
-            arviaChat = null;
-
-            arviaChatWidget.classList.remove('expand');
-            document.getElementById('arvia.chat.widget.container').classList.remove('enter');
-            document.getElementById('arvia.chat.widget.container').style.display = 'none';
-            document.getElementById('arvia.chat.widget.logo').style.display = 'flex';
-            document.getElementById('closeChatWidget').removeEventListener("click", closeArviaChatWidget);
-            setTimeout(function () {
-                document.getElementById('arvia.chat.widget.container').classList.remove('enter');
-                document.getElementById('arvia.chat.widget.container').style.display = 'flex';
-                arviaChatWidget.addEventListener("click", openArviaChatWidget);
-            }, 500);
-        }
     </script>
 
   </body>
