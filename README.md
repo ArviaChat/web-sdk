@@ -7,7 +7,7 @@ Just include **arvia.chat.js** on your page, create an empty div element and ini
   <head>
     <meta charset="utf-8">
     <title>Arvia Chat</title>
-    <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>`
+    <script type="text/javascript" src="https://arvia.chat/js/arvia.chat.js" ></script>
   </head>
   <body>
     <button id="startButton" style="height: 32px">Start Arvia Chat</button><br />
