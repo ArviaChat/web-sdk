@@ -20,10 +20,10 @@
     -   [Examples][16]
 -   [getRoomName][17]
     -   [Examples][18]
--   [setSubLevelRoomName][19]
+-   [setDynamicRoomName][19]
     -   [Parameters][20]
     -   [Examples][21]
--   [getSubLevelRoomName][22]
+-   [getDynamicRoomName][22]
     -   [Examples][23]
 -   [setUserName][24]
     -   [Parameters][25]
@@ -83,20 +83,20 @@
     -   [Examples][79]
 -   [switchMicrophone][80]
     -   [Examples][81]
--   [setMicrophone][82]
-    -   [Parameters][83]
+-   [getMicrophone][82]
+-   [switchCamera][83]
     -   [Examples][84]
--   [getMicrophone][85]
--   [switchCamera][86]
-    -   [Examples][87]
--   [setCamera][88]
-    -   [Parameters][89]
-    -   [Examples][90]
--   [getCamera][91]
-    -   [Examples][92]
--   [toggleScreenSharing][93]
+-   [getCamera][85]
+    -   [Examples][86]
+-   [toggleScreenSharing][87]
+    -   [Examples][88]
+-   [close][89]
+    -   [Parameters][90]
+    -   [Examples][91]
+-   [setMicrophone][92]
+    -   [Parameters][93]
     -   [Examples][94]
--   [close][95]
+-   [setCamera][95]
     -   [Parameters][96]
     -   [Examples][97]
 -   [shareScreen][98]
@@ -241,9 +241,9 @@ Set room name.
 // Top-level room
 arviaChat.setRoomName('my-room');
 
-// Sub-level room ([projectId]/[roomName])
+// Dynamic room ([projectId]/[roomName])
 arviaChat.setRoomName('5b4f145ac4dbc95dcf926a52/my-room');
-// You can also set the sub-level room name using setSubLevelRoomName method. setSubLevelRoomName method only gets the room name as the parameter. Project id is added automatically as a prefix.
+// You can also set the dynamic room name using setDynamicRoomName method. setDynamicRoomName method only expects the room name as the parameter. Project id is added automatically as a prefix.
 ```
 
 ## getRoomName
@@ -256,41 +256,41 @@ Get room name.
 arviaChat.getRoomName();
 // returns 'my-room' if the room is a top-level room
 
-// if current room is a sub-level room, this method returns [projectId]/[roomName] (E.g: '5b4f145ac4dbc95dcf926a52/my-room')
+// if current room is a dynamic room, this method returns [projectId]/[roomName] (E.g: '5b4f145ac4dbc95dcf926a52/my-room')
 ```
 
 Returns **[string][154]** The room name set by the setRoomName method.
 
-## setSubLevelRoomName
+## setDynamicRoomName
 
-Set sub-level room name.
+Set dynamic room name.
 
 ### Parameters
 
--   `roomName` **[string][154]** The sub-level room name suffix to connect and join
+-   `roomName` **[string][154]** The dynamic room name suffix to connect and join
 
 ### Examples
 
 ```javascript
-arviaChat.setSubLevelRoomName('my-room');
+arviaChat.setDynamicRoomName('my-room');
 
 // Actual room name will be [projectId]/[roomName] (E.g: '5b4f145ac4dbc95dcf926a52/my-room')
 ```
 
-## getSubLevelRoomName
+## getDynamicRoomName
 
 Get room name.
 
 ### Examples
 
 ```javascript
-arviaChat.getSubLevelRoomName();
+arviaChat.getDynamicRoomName();
 // returns 'my-room'
 
-// If current room is not a sub-level room, this method returns empty string.
+// If current room is not a dynamic room, this method returns empty string.
 ```
 
-Returns **[string][154]** The room name set by the setSubLevelRoomName method.
+Returns **[string][154]** The room name set by the setDynamicRoomName method.
 
 ## setUserName
 
@@ -610,20 +610,6 @@ Switch the audio input to next available microphone.
 arviaChat.switchMicrophone();
 ```
 
-## setMicrophone
-
-Set the outgoing audio stream source device.
-
-### Parameters
-
--   `microphone` **([boolean][156] \| [string][154])** True/False or Microphone Id to enable or disable video stream. Available Microphone Ids can be obtained by the getDeviceInfo method.
-
-### Examples
-
-```javascript
-arviaChat.setMicrophone(true);
-```
-
 ## getMicrophone
 
 Get the outgoing audio stream source device id .
@@ -639,20 +625,6 @@ Switch the video input to next available camera.
 
 ```javascript
 arviaChat.switchCamera();
-```
-
-## setCamera
-
-Set the outgoing video stream source device.
-
-### Parameters
-
--   `camera` **([boolean][156] \| [string][154])** True/False or Camera Id to enable or disable video stream. Available Camera Ids can be obtained by the getDeviceInfo method.
-
-### Examples
-
-```javascript
-arviaChat.setCamera(true);
 ```
 
 ## getCamera
@@ -689,6 +661,34 @@ Disconnect and terminate the chat interface.
 
 ```javascript
 arviaChat.close();
+```
+
+## setMicrophone
+
+Set the outgoing audio stream source device.
+
+### Parameters
+
+-   `microphone` **([boolean][156] \| [string][154])** True/False or Microphone Id to enable or disable video stream. Available Microphone Ids can be obtained by the getDeviceInfo method.
+
+### Examples
+
+```javascript
+arviaChat.setMicrophone(true);
+```
+
+## setCamera
+
+Set the outgoing video stream source device.
+
+### Parameters
+
+-   `camera` **([boolean][156] \| [string][154])** True/False or Camera Id to enable or disable video stream. Available Camera Ids can be obtained by the getDeviceInfo method.
+
+### Examples
+
+```javascript
+arviaChat.setCamera(true);
 ```
 
 ## shareScreen
@@ -752,7 +752,7 @@ Turn on camera and broadcast your video.
 ### Examples
 
 ```javascript
-arviaChat.turnOffCamera();
+arviaChat.turnOnCamera();
 ```
 
 ## turnOffCamera
@@ -1098,13 +1098,13 @@ arviaChat.on(ArviaChatEvent.CONNECT,
 
 [18]: #examples-6
 
-[19]: #setsublevelroomname
+[19]: #setdynamicroomname
 
 [20]: #parameters-4
 
 [21]: #examples-7
 
-[22]: #getsublevelroomname
+[22]: #getdynamicroomname
 
 [23]: #examples-8
 
@@ -1224,33 +1224,33 @@ arviaChat.on(ArviaChatEvent.CONNECT,
 
 [81]: #examples-32
 
-[82]: #setmicrophone
+[82]: #getmicrophone
 
-[83]: #parameters-15
+[83]: #switchcamera
 
 [84]: #examples-33
 
-[85]: #getmicrophone
+[85]: #getcamera
 
-[86]: #switchcamera
+[86]: #examples-34
 
-[87]: #examples-34
+[87]: #togglescreensharing
 
-[88]: #setcamera
+[88]: #examples-35
 
-[89]: #parameters-16
+[89]: #close
 
-[90]: #examples-35
+[90]: #parameters-15
 
-[91]: #getcamera
+[91]: #examples-36
 
-[92]: #examples-36
+[92]: #setmicrophone
 
-[93]: #togglescreensharing
+[93]: #parameters-16
 
 [94]: #examples-37
 
-[95]: #close
+[95]: #setcamera
 
 [96]: #parameters-17
 
