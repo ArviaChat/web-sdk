@@ -11,7 +11,7 @@ Just include **arvia.chat.js** on your page, create an empty div element and ini
   </head>
   <body>
     <button id="startButton" style="height: 32px">Start Arvia Chat</button><br />
-    <div id="arvia.chat">
+    <div id="arvia.chat"></div>
     <script type="text/javascript">
 
       document.getElementById('startButton').addEventListener('click',
