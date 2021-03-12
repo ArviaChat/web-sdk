@@ -1,7 +1,7 @@
-token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjA3OGQ5M2EyMGE5NzAwMzkxZGRhN2QiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2MTU0OTA2MDksImV4cCI6MTYxNTU3NzAwOX0.FFn3JfhlX5eqg7jier2MCFiELf3ZxTJY_LDaw8CUlWg';
+token = '';
 
 function connectSocket() {
-    const socket = io('https://arvia.ch:4343', {
+    const socket = io('https://arvia.chat', {
       transportOptions: {
         polling: {
           extraHeaders: {
