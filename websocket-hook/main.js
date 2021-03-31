@@ -19,6 +19,7 @@ function connectSocket() {
     });
     socket.on("connect", () => {
       setStatus('Connected');
+      socket.emit('Get_Active_Rooms');
     });
 }
 
