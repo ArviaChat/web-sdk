@@ -38,5 +38,5 @@ Arvia Chat in a popup <a href="https://arvia.chat/sdk/web/example-popup.html" ta
 Floating Chat Widget <a href="https://arvia.chat/sdk/web/example-widget.html" target="_blank">https://arvia.chat/sdk/web/example-widget.html</a><br />
 
 ## SDK Reference
-Take a look at the <a href="https://arvia.chat/sdk/web/reference/index.html" target="_blank">SDK Reference</a> for more options and customization.<br /><br />
+Take a look at the <a href="https://docs.arvia.tech/sdk" target="_blank">SDK Reference</a> for more options and customization.<br /><br />
 For mark down version, go to [reference.md](reference.md)
